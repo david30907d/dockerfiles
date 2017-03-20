@@ -22,3 +22,5 @@ RUN export LANG=C.UTF-8
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["mongod"]
+
+EXPOSE 8000
