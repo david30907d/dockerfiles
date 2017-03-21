@@ -18,6 +18,7 @@ RUN apt-get install -y net-tools vim
 
 # solve encoding error for chinese
 RUN export LANG=C.UTF-8
+RUN alias ll='ls -al'
 
 ENTRYPOINT ["/entrypoint.sh"]
 
