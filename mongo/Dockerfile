@@ -22,7 +22,6 @@ ENV LANG=C.UTF-8
 # add ll in alias
 RUN export alias ll='ls -al'
 
-
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["mongod"]
