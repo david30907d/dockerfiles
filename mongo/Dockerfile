@@ -17,7 +17,11 @@ RUN pip3 install -U virtualenv
 RUN apt-get install -y net-tools vim
 
 # solve encoding error for chinese
-RUN export LANG=C.UTF-8
+ENV LANG=C.UTF-8
+
+# add ll in alias
+RUN export alias ll='ls -al'
+
 
 ENTRYPOINT ["/entrypoint.sh"]
 

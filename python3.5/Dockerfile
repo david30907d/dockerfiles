@@ -7,8 +7,13 @@ MAINTAINER davidtnfsh <davidtnfsh@gmail.com>
 RUN apt-get install -y net-tools vim
 
 # solve encoding error for chinese
-RUN export LANG=C.UTF-8
+ENV LANG=C.UTF-8
+
+# add ll in alias
+RUN export alias ll='ls -al'
 
 CMD [] 
 
 ENTRYPOINT ["/bin/bash"]
+
+EXPOSE 8000
