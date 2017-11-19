@@ -4,7 +4,7 @@ FROM sgoblin/python3.5
 MAINTAINER davidtnfsh <davidtnfsh@gmail.com> 
 
 # install ifconfig
-RUN apt-get install -y net-tools vim
+RUN apt-get install -y net-tools vim wget
 
 # solve encoding error for chinese
 ENV LANG=C.UTF-8
