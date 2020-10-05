@@ -3,8 +3,8 @@ FROM python:3.6.5-alpine
 ENV NUMPY_VERSION="1.11.2" \
     OPENBLAS_VERSION="0.2.18"
 
-RUN echo "http://alpine.gliderlabs.com/alpine/v3.4/main" > /etc/apk/repositories \
-    && echo "http://alpine.gliderlabs.com/alpine/v3.4/community" >> /etc/apk/repositories \
+RUN echo "http://alpine.gliderlabs.com/alpine/v3.5/main" > /etc/apk/repositories \
+    && echo "http://alpine.gliderlabs.com/alpine/v3.5/community" >> /etc/apk/repositories \
     && echo "@edge http://alpine.gliderlabs.com/alpine/edge/community" >> /etc/apk/repositories \
     && apk --no-cache add openblas-dev@edge
 
