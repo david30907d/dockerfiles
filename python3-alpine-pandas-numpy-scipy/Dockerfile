@@ -6,6 +6,7 @@ ENV NUMPY_VERSION="1.11.2" \
 RUN echo "http://alpine.gliderlabs.com/alpine/v3.5/main" > /etc/apk/repositories \
     && echo "http://alpine.gliderlabs.com/alpine/v3.5/community" >> /etc/apk/repositories \
     && echo "@edge http://alpine.gliderlabs.com/alpine/edge/community" >> /etc/apk/repositories \
+    && apk --no-cache add so:libgfortran \
     && apk --no-cache add libgfortran openblas-dev@edge
 
 RUN export NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
